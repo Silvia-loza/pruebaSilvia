@@ -1,0 +1,121 @@
+// Animación hecha con Css investigación sobre esto ha sido necesaria.
+
+@keyframes slide {
+    0% { transform: translateX(-3%); }
+    10% { transform: translateX(-3%); }
+ 
+    15% { transform: translateX(-103%); }
+    35% { transform: translateX(-103%); }
+ 
+    40% { transform: translateX(-203%); }
+    60% { transform: translateX(-203%); }           
+ 
+    65% { transform: translateX(-303%); }
+    85% { transform: translateX(-303%); }
+ 
+    90% { transform: translateX(-403%); }
+    100% { transform: translateX(-403%); }
+ 
+}
+ 
+* { box-sizing: border-box; }
+ 
+html { scroll-behavior: smooth; }
+ 
+body {
+    font-family: Roboto;
+}
+ 
+.wrapper-slide {
+ 
+    max-width: 100%;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    
+}
+ 
+.slider {
+    max-width: 100%;
+    // background-color: aquamarine;
+    overflow: hidden;
+}
+ 
+.slides {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+   
+
+}
+ 
+.slide {
+    width: 100vw;
+    height: 25vw;
+    list-style: none;
+    flex-shrink: 0;
+    animation-name: slide;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+ 
+ 
+.slide img {
+    width: 100vw;
+    vertical-align: top;
+
+}
+ 
+.slide a {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+ 
+.caption {
+    color: white;
+    background-color: var(--orange);
+    font-size: 3vw;
+    position: absolute;
+    top: 15vw;
+    left: 55vw;                                
+}
+ 
+.slide:target {
+    animation-name: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+}
+ 
+.slider-controler {         
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100;
+}
+ 
+.slider-controler li {
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+}
+ 
+.slider-controler a {
+    display: inline-block;
+    vertical-align: top;            
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+ 
+
+
